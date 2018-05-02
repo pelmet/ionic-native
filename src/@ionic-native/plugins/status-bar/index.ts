@@ -45,6 +45,23 @@ export class StatusBar extends IonicNativePlugin {
   overlaysWebView(doesOverlay: boolean) { };
 
   /**
+   * Gets the current height (in CSS pixels) of system statusbar.
+   *
+   * **Note that this is implemented currently only on Android**
+   *
+   * @param packageSuccess Callback invoked with the current statusbar height.
+   * @param packageError Optional callback invoked in case of an error.
+   * @returns {string}
+   */
+  @Cordova({
+    sync: true
+  })
+  getStatusBarHeight(
+    packageSuccess: Function,
+    packageError?: Function
+  ) { };
+
+  /**
    * Use the default statusbar (dark text, for light backgrounds).
    */
   @Cordova({
